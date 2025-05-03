@@ -4,6 +4,50 @@
     menu.classList.toggle('hidden');
 });
 
+document.querySelector('.viewAllProject').addEventListener('click', ()=>{
+    window.location.href = '/viewAllProject'
+});
+
+const button = document.querySelectorAll('.viewDetails');
+
+button.forEach(button =>{
+    button.addEventListener('click', ()=>{
+    window.location.href = '/details'
+    })
+});
+
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    try {
+        const response = await fetch('/api/email/send', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, subject, message })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            alert(data.message || 'Email sent successfully!');
+        } else {
+            alert(data.error || data.errors.join(', '));
+        }
+    } catch (error) {
+        console.error('Error sending message:', error);
+        alert('Failed to send message.');
+    }
+});
+
+
+
+
 // Filter projects
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');

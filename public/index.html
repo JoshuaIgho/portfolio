@@ -6,134 +6,7 @@
     <title>Joshua Igho | Frontend Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out forwards;
-        }
-        
-        .animate-slide-left {
-            animation: slideInLeft 0.8s ease-out forwards;
-        }
-        
-        .animate-slide-right {
-            animation: slideInRight 0.8s ease-out forwards;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #667eea;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .project-card {
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .animated-underline {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .animated-underline::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            bottom: -8px;
-            left: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.3s ease-out;
-        }
-        
-        .animated-underline:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-        
-        .tech-tag {
-            transition: all 0.3s ease;
-        }
-        
-        .tech-tag:hover {
-            transform: scale(1.05);
-        }
-        
-        .feature-card:hover .feature-icon {
-            transform: rotate(15deg) scale(1.1);
-        }
-        
-        .feature-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .glow {
-            box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Navigation -->
@@ -585,8 +458,8 @@
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                               alt="Project 1"
                               class="w-full h-full object-cover transition duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <button class="bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
+                        <div class="view-details absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <button class="viewDetails bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
                                 View Details
                             </button>
                         </div>
@@ -609,7 +482,7 @@
                               alt="Project 2"
                               class="w-full h-full object-cover transition duration-500 hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <button class="bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
+                            <button class="viewDetails bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
                                 View Details
                             </button>
                         </div>
@@ -632,7 +505,7 @@
                               alt="Project 3"
                               class="w-full h-full object-cover transition duration-500 hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <button class="bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
+                            <button class="viewDetails bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
                                 View Details
                             </button>
                         </div>
@@ -655,7 +528,7 @@
                               alt="Project 4"
                               class="w-full h-full object-cover transition duration-500 hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <button class="bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
+                            <button class="viewDetails bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
                                 View Details
                             </button>
                         </div>
@@ -678,7 +551,7 @@
                               alt="Project 5"
                               class="w-full h-full object-cover transition duration-500 hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <button class="bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
+                            <button class="viewDetails bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
                                 View Details
                             </button>
                         </div>
@@ -701,7 +574,7 @@
                               alt="Project 6"
                               class="w-full h-full object-cover transition duration-500 hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <button class="bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
+                            <button class="viewDetails bg-white text-purple-800 px-4 py-2 rounded-lg font-medium hover:bg-purple-800 hover:text-white transition">
                                 View Details
                             </button>
                         </div>
@@ -719,7 +592,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <button class="border-2 border-purple-800 text-purple-800 hover:bg-purple-800 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                <button class="viewAllProject border-2 border-purple-800 text-purple-800 hover:bg-purple-800 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300">
                     View All Projects
                 </button>
             </div>
@@ -868,7 +741,7 @@
                 </div>
                 
                 <div class="md:w-1/2">
-                    <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <form id="contact-form" class="bg-gray-50 p-8 rounded-lg shadow-md" >
                         <div class="mb-6">
                             <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
                             <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="John Doe">
@@ -899,52 +772,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="gradient-bg text-white py-12">
+    <footer class="gradient-bg text-white py-2">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-code text-2xl"></i>
-                        <span class="text-xl font-bold">Joshua Igho</span>
-                    </div>
-                    <p class="mt-2 text-purple-100">Building the future, one project at a time.</p>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16">
-                    <div>
-                        <h4 class="font-bold mb-4">Quick Links</h4>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="hover:text-yellow-300 transition duration-200">Home</a></li>
-                            <li><a href="#about" class="hover:text-yellow-300 transition duration-200">About</a></li>
-                            <li><a href="#skills" class="hover:text-yellow-300 transition duration-200">Skills</a></li>
-                            <li><a href="#projects" class="hover:text-yellow-300 transition duration-200">Projects</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h4 class="font-bold mb-4">Resources</h4>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="hover:text-yellow-300 transition duration-200">Blog</a></li>
-                            <li><a href="#" class="hover:text-yellow-300 transition duration-200">Tutorials</a></li>
-                            <li><a href="#" class="hover:text-yellow-300 transition duration-200">Portfolio</a></li>
-                            <li><a href="#" class="hover:text-yellow-300 transition duration-200">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="col-span-2 md:col-span-1">
-                        <h4 class="font-bold mb-4">Newsletter</h4>
-                        <p class="mb-4 text-purple-100">Subscribe to my newsletter for updates.</p>
-                        <div class="flex">
-                            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg text-gray-800 w-full focus:outline-none">
-                            <button class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold px-4 py-2 rounded-r-lg transition duration-200">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-purple-400 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="border-purple-400 mt- pt-8 pb-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-purple-100 mb-4 md:mb-0">© 2025 Joshua Igho. All rights reserved.</p>
                 <div class="flex space-x-6">
                     <a href="#" class="hover:text-yellow-300 transition duration-200"><i class="fab fa-github"></i></a>
