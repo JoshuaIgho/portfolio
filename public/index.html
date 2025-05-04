@@ -57,17 +57,17 @@
                         </a>
                     </div>
                     <div class="mt-8 flex space-x-4">
-                        <a href="#" class="text-gray-600 hover:text-purple-800 transition">
+                        <a href="https://github.com/JoshuaIgho" target="_blank" class="text-gray-600 hover:text-purple-800 transition">
                             <i class="fab fa-github text-2xl"></i>
                         </a>
                         <a href="#" class="text-gray-600 hover:text-purple-800 transition">
                             <i class="fab fa-linkedin text-2xl"></i>
                         </a>
-                        <a href="#" class="text-gray-600 hover:text-purple-800 transition">
-                            <i class="fab fa-twitter text-2xl"></i>
+                        <a href="https://www.instagram.com/warrii___/" target="_blank" class="text-gray-600 hover:text-purple-800 transition">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
                         </a>
-                        <a href="#" class="text-gray-600 hover:text-purple-800 transition">
-                            <i class="fab fa-dribbble text-2xl"></i>
+                        <a href="https://codepen.io/Joshua-Alex" target="_blank" class="text-gray-600 hover:text-purple-800 transition">
+                            <i class="fa-brands fa-codepen text-2xl"></i>
                         </a>
                     </div>
                 </div>
@@ -599,27 +599,128 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-purple-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Client <span class="text-purple-800">Testimonials</span></h2>
+      <!-- Testimonials Section -->
+      <section class="py-12 md:py-20 bg-purple-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12">Client <span class="text-purple-800">Testimonials</span></h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
+            <!-- Desktop Slider (shown on md+ screens) -->
+            <div class="desktop-slider">
+                <div class="testimonial-slider relative max-w-4xl mx-auto">
+                    <!-- Slider Controls -->
+                    <button id="prevBtn" class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 md:p-3 rounded-full shadow-md hover:bg-purple-100 transition -ml-4">
+                        <i class="fas fa-chevron-left text-purple-800 text-sm md:text-base"></i>
+                    </button>
+                    
+                    <button id="nextBtn" class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 md:p-3 rounded-full shadow-md hover:bg-purple-100 transition -mr-4">
+                        <i class="fas fa-chevron-right text-purple-800 text-sm md:text-base"></i>
+                    </button>
+                    
+                    <!-- Testimonial Slides -->
+                    <div class="relative overflow-hidden h-auto md:h-96">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide active absolute inset-0 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <div class="flex items-center mb-4 md:mb-6">
+                                <div class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden mr-3 md:mr-4 border-2 md:border-4 border-purple-100">
+                                    <img src="WhatsApp Image 2025-01-24 at 21.10.15.jpeg" alt="Reigneth Igho" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-base md:text-lg">Reigneth Igho</h4>
+                                    <p class="text-gray-600 text-sm md:text-base">CEO, Reigneth Cakes</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm md:text-lg leading-relaxed">
+                                "Working with Joshua was one of the best decisions I made for my business. He completely understood my vision and brought Reigneth Cakes to life online. The website is beautiful, easy to navigate, and truly represents who I am as a baker. I've been getting more orders and amazing feedback since it launched. Thank you, Joshua!"
+                            </p>
+                            <div class="flex mt-4 md:mt-6 text-yellow-400 text-base md:text-xl">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-gray-600 text-sm">CEO, TechSolutions</p>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide next absolute inset-0 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <div class="flex items-center mb-4 md:mb-6">
+                                <div class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden mr-3 md:mr-4 border-2 md:border-4 border-purple-100">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Michael Chen" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-base md:text-lg">Michael Chen</h4>
+                                    <p class="text-gray-600 text-sm md:text-base">CTO, InnovateCo</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm md:text-lg leading-relaxed">
+                                "Working with Joshua was a pleasure. His attention to detail and commitment to quality is evident in every aspect of his work. He delivered our project ahead of schedule while maintaining excellent communication throughout the process. The final product exceeded our expectations in both functionality and design."
+                            </p>
+                            <div class="flex mt-4 md:mt-6 text-yellow-400 text-base md:text-xl">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide next absolute inset-0 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                            <i class="fas fa-quote-right quote-icon"></i>
+                            <div class="flex items-center mb-4 md:mb-6">
+                                <div class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden mr-3 md:mr-4 border-2 md:border-4 border-purple-100">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Emily Rodriguez" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-base md:text-lg">Emily Rodriguez</h4>
+                                    <p class="text-gray-600 text-sm md:text-base">Product Manager, DigitalFirst</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm md:text-lg leading-relaxed">
+                                "Joshua's work has transformed our digital presence. The intuitive interface and powerful features have delighted both our team and customers. His ability to translate complex requirements into elegant solutions is remarkable. We've seen a 40% increase in user engagement since implementing his designs."
+                            </p>
+                            <div class="flex mt-4 md:mt-6 text-yellow-400 text-base md:text-xl">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">
-                        "Joshua's work exceeded our expectations. He delivered a robust solution that has significantly improved our operational efficiency."
-                    </p>
-                    <div class="flex mt-4 text-yellow-400">
+                    
+                    <!-- Dot Indicators -->
+                    <div class="flex justify-center mt-6 md:mt-8 space-x-2">
+                        <button class="dot-indicator w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-300 active" data-index="0"></button>
+                        <button class="dot-indicator w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-300" data-index="1"></button>
+                        <button class="dot-indicator w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-300" data-index="2"></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Testimonials (shown on small screens) -->
+            <div class="mobile-testimonials">
+                <!-- Testimonial 1 -->
+                <div class="mobile-testimonial">
+                    <i class="fas fa-quote-right text-purple-200 text-3xl mb-2"></i>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-3 border-2 border-purple-100">
+                            <img src="WhatsApp Image 2025-01-24 at 21.10.15.jpeg" alt="Reigneth Igho" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base">Reigneth Igho</h4>
+                            <p class="text-gray-600 text-sm">CEO, Reigneth Cakes</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            "Working with Joshua was one of the best decisions I made for my business. He completely understood my vision and brought Reigneth Cakes to life online. The website is beautiful, easy to navigate, and truly represents who I am as a baker. I've been getting more orders and amazing feedback since it launched. Thank you, Joshua!"
+                        </p>
+                    </div>
+                    <span class="read-more-btn text-sm">Read more <i class="fas fa-chevron-down ml-1"></i></span>
+                    <div class="flex mt-4 text-yellow-400 text-base">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -629,20 +730,24 @@
                 </div>
                 
                 <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                <div class="mobile-testimonial">
+                    <i class="fas fa-quote-right text-purple-200 text-3xl mb-2"></i>
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen" class="w-full h-full object-cover">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-3 border-2 border-purple-100">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Michael Chen" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold">Michael Chen</h4>
+                            <h4 class="font-bold text-base">Michael Chen</h4>
                             <p class="text-gray-600 text-sm">CTO, InnovateCo</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">
-                        "Working with Joshua was a pleasure. His attention to detail and commitment to quality is evident in every aspect of his work."
-                    </p>
-                    <div class="flex mt-4 text-yellow-400">
+                    <div class="testimonial-content">
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            "Working with Joshua was a pleasure. His attention to detail and commitment to quality is evident in every aspect of his work. He delivered our project ahead of schedule while maintaining excellent communication throughout the process. The final product exceeded our expectations in both functionality and design."
+                        </p>
+                    </div>
+                    <span class="read-more-btn text-sm">Read more <i class="fas fa-chevron-down ml-1"></i></span>
+                    <div class="flex mt-4 text-yellow-400 text-base">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -652,20 +757,24 @@
                 </div>
                 
                 <!-- Testimonial 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                <div class="mobile-testimonial">
+                    <i class="fas fa-quote-right text-purple-200 text-3xl mb-2"></i>
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" class="w-full h-full object-cover">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-3 border-2 border-purple-100">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Emily Rodriguez" class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold">Emily Rodriguez</h4>
+                            <h4 class="font-bold text-base">Emily Rodriguez</h4>
                             <p class="text-gray-600 text-sm">Product Manager, DigitalFirst</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">
-                        "Joshua's work has transformed our digital presence. The intuitive interface and powerful features have delighted both our team and customers."
-                    </p>
-                    <div class="flex mt-4 text-yellow-400">
+                    <div class="testimonial-content">
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            "Joshua's work has transformed our digital presence. The intuitive interface and powerful features have delighted both our team and customers. His ability to translate complex requirements into elegant solutions is remarkable. We've seen a 40% increase in user engagement since implementing his designs."
+                        </p>
+                    </div>
+                    <span class="read-more-btn text-sm">Read more <i class="fas fa-chevron-down ml-1"></i></span>
+                    <div class="flex mt-4 text-yellow-400 text-base">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -676,7 +785,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -696,7 +804,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold">Location</h4>
-                                <p class="text-gray-600">San Francisco, CA</p>
+                                <p class="text-gray-600">Ikeja Lagos, Nigeria</p>
                             </div>
                         </div>
                         
@@ -706,7 +814,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold">Email</h4>
-                                <p class="text-gray-600">hello@joshuaigho.dev</p>
+                                <p class="text-gray-600">joshuaalex822@gmail.com</p>
                             </div>
                         </div>
                         
@@ -716,7 +824,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold">Phone</h4>
-                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                                <p class="text-gray-600">+234 902 530 9941</p>
                             </div>
                         </div>
                     </div>
@@ -724,17 +832,17 @@
                     <div class="mt-8">
                         <h4 class="font-bold mb-4">Follow Me</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="bg-gray-100 text-gray-700 hover:bg-purple-800 hover:text-white p-3 rounded-full transition duration-300">
+                            <a href="https://github.com/JoshuaIgho" target="_blank" class="bg-gray-100 text-gray-700 hover:bg-purple-800 hover:text-white p-3 rounded-full transition duration-300">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" class="bg-gray-100 text-gray-700 hover:bg-purple-800 hover:text-white p-3 rounded-full transition duration-300">
+                            <a href="#" target="_blank" class="bg-gray-100 text-gray-700 hover:bg-purple-800 hover:text-white p-3 rounded-full transition duration-300">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" class="bg-gray-100 text-gray-700 hover:bg-purple-800 hover:text-white p-3 rounded-full transition duration-300">
-                                <i class="fab fa-twitter"></i>
+                            <a href="https://www.instagram.com/warrii___/" target="_blank" class="bg-gray-100 text-gray-700 hover:bg-purple-800 hover:text-white p-3 rounded-full transition duration-300">
+                                <i class="fa-brands fa-instagram"></i>
                             </a>
-                            <a href="#" class="bg-gray-100 text-gray-700 hover:bg-purple-800 hover:text-white p-3 rounded-full transition duration-300">
-                                <i class="fab fa-dribbble"></i>
+                            <a href="https://codepen.io/Joshua-Alex" target="_blank" class="bg-gray-100 text-gray-700 hover:bg-purple-800 hover:text-white p-3 rounded-full transition duration-300">
+                                <i class="fa-brands fa-codepen"></i>
                             </a>
                         </div>
                     </div>
@@ -775,17 +883,17 @@
     <footer class="gradient-bg text-white py-2">
         <div class="container mx-auto px-6">
             <div class="border-purple-400 mt- pt-8 pb-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-purple-100 mb-4 md:mb-0">© 2025 Joshua Igho. All rights reserved.</p>
+                <p>© <span id="year"></span> Joshua Igho. All rights reserved.</p>
                 <div class="flex space-x-6">
-                    <a href="#" class="hover:text-yellow-300 transition duration-200"><i class="fab fa-github"></i></a>
-                    <a href="#" class="hover:text-yellow-300 transition duration-200"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="hover:text-yellow-300 transition duration-200"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-yellow-300 transition duration-200"><i class="fab fa-dribbble"></i></a>
+                    <a href="https://github.com/JoshuaIgho" target="_blank" class="hover:text-yellow-300 transition duration-200"><i class="fab fa-github"></i>   
+                    <a href="#" target="_blank" class="hover:text-yellow-300 transition duration-200"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/warrii___/" target="_blank" class="hover:text-yellow-300 transition duration-200"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://codepen.io/Joshua-Alex" target="_blank" class="hover:text-yellow-300 transition duration-200"><i class="fa-brands fa-codepen"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-  <script src="/script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>

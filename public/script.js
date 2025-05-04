@@ -132,3 +132,148 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
 });
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Desktop slider functionality
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.dot-indicator');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+    let autoSlideInterval;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    // Initialize slider
+    function updateSlider() {
+        slides.forEach((slide, index) => {
+            if (index === currentIndex) {
+                slide.classList.remove('prev', 'next');
+                slide.classList.add('active');
+            } else if (index < currentIndex) {
+                slide.classList.remove('active', 'next');
+                slide.classList.add('prev');
+            } else {
+                slide.classList.remove('active', 'prev');
+                slide.classList.add('next');
+            }
+        });
+        
+        // Update dot indicators
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+    
+    // Go to specific slide
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+        resetAutoSlide();
+    }
+    
+    // Next slide
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+        resetAutoSlide();
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+        resetAutoSlide();
+    }
+    
+    // Auto slide
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+    
+    // Event listeners for desktop navigation
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    
+    // Dot navigation
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            goToSlide(parseInt(this.dataset.index));
+        });
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlide();
+        }
+    });
+    
+    // Touch events for swipe on mobile
+    const sliderContainer = document.querySelector('.testimonial-slider');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            clearInterval(autoSlideInterval);
+        }, {passive: true});
+        
+        sliderContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoSlide();
+        }, {passive: true});
+    }
+    
+    function handleSwipe() {
+        const difference = touchStartX - touchEndX;
+        if (difference > 50) {
+            // Swipe left
+            nextSlide();
+        } else if (difference < -50) {
+            // Swipe right
+            prevSlide();
+        }
+    }
+    
+    // Initialize desktop slider
+    if (slides.length > 0) {
+        updateSlider();
+        startAutoSlide();
+        
+        // Pause on hover
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+            sliderContainer.addEventListener('mouseleave', startAutoSlide);
+        }
+    }
+    
+    // Mobile testimonials functionality
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const content = this.previousElementSibling;
+            const icon = this.querySelector('i');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                this.innerHTML = 'Read more <i class="fas fa-chevron-down ml-1"></i>';
+            } else {
+                content.classList.add('expanded');
+                this.innerHTML = 'Read less <i class="fas fa-chevron-up ml-1"></i>';
+            }
+        });
+    });
+});
